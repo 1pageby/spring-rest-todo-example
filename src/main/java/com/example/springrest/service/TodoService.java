@@ -18,9 +18,9 @@ public class TodoService {
 
     /**
      * Create a new To-Do record
-     * @param todo
-     * @param userId
-     * @return
+     * @param  todo - new todo Entity
+     * @param  userId - id owner for todo record (id)
+     * @return todo Entity
      */
     public Todo createTodo(TodoEntity todo, Long userId){
         UserEntity user = userRepo.findById(userId).get();
@@ -30,8 +30,8 @@ public class TodoService {
 
     /**
      * Change completed status for record by id
-     * @param id
-     * @return
+     * @param id  - id of todo record for update
+     * @return updated Todo
      */
     public Todo compleateTodo(Long id){
         TodoEntity todo = todoRepo.findById(id).get();

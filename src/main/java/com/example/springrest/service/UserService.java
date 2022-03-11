@@ -17,8 +17,8 @@ public class UserService {
 
     /**
      * New User Registration
-     * @param user
-     * @return
+     * @param user - user for create
+     * @return new created user
      * @throws UserAlredyExistException
      */
     public UserEntity registration(UserEntity user) throws UserAlredyExistException {
@@ -31,8 +31,8 @@ public class UserService {
 
     /**
      * Get one user by id
-     * @param id
-     * @return
+     * @param id - userId for select
+     * @return user
      * @throws UserNotFoundException
      */
     public User getUserById(Long id) throws UserNotFoundException {
@@ -50,8 +50,8 @@ public class UserService {
 
     /**
      * Delete one user by id
-     * @param id
-     * @return
+     * @param id - id user for removing
+     * @return id removed record
      */
     public Long deleteUserById(Long id){
         userRepo.deleteById(id);
